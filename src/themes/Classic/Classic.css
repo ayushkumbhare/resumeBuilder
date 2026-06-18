@@ -1,0 +1,135 @@
+.cl-page {
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  font-family: var(--cl-font, 'Calibri', Arial, sans-serif);
+  font-size: 9.5pt;
+  color: #1a1a1a;
+  padding: 14mm 18mm;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+/* HEADER */
+.cl-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.cl-name {
+  display: block;
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--cl-primary, #0F2A4A);
+  letter-spacing: 1.5px;
+  margin: 0 0 2px;
+  line-height: 1.1;
+}
+
+.cl-headline {
+  display: block;
+  font-size: 10pt;
+  color: #555;
+  margin: 0 0 4px;
+  font-weight: 400;
+}
+
+.cl-contacts {
+  font-size: 8.5pt;
+  color: #444;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* SECTION */
+.cl-section {
+  margin-top: 10px;
+}
+
+.cl-section-title {
+  font-size: 9.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--cl-primary, #0F2A4A);
+  border-bottom: 1.5px solid var(--cl-primary, #0F2A4A);
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+}
+
+.cl-body {
+  font-size: 9pt;
+  line-height: 1.5;
+  color: #222;
+  margin: 0;
+}
+
+/* SKILLS */
+.cl-skill-row {
+  display: flex;
+  font-size: 9pt;
+  margin-bottom: 2px;
+  line-height: 1.45;
+}
+
+.cl-skill-key {
+  font-weight: 700;
+  color: var(--cl-primary, #0F2A4A);
+  width: 52mm;
+  flex-shrink: 0;
+}
+
+.cl-skill-val {
+  color: #222;
+}
+
+/* EXPERIENCE */
+.cl-exp {
+  margin-bottom: 7px;
+}
+
+.cl-exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cl-company {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: #111;
+}
+
+.cl-meta {
+  font-weight: 400;
+  font-size: 9pt;
+  color: #555;
+}
+
+.cl-period {
+  font-size: 8.5pt;
+  color: #555;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.cl-job-title {
+  font-size: 9pt;
+  color: #444;
+  font-style: italic;
+  margin: 1px 0 3px;
+}
+
+/* BULLETS */
+.cl-bullets {
+  margin: 3px 0 0 0;
+  padding-left: 14px;
+  font-size: 9pt;
+  line-height: 1.45;
+  color: #222;
+}
+
+.cl-bullets li {
+  margin-bottom: 1.5px;
+}

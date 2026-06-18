@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  /* LIGHT THEME (Calm) */
+  --ui-bg-shell: #f1f5f9;
+  --ui-bg-panel: #ffffff;
+  --ui-bg-hover: #f8fafc;
+  --ui-bg-active: #e2e8f0;
+  
+  --ui-border: #e2e8f0;
+  --ui-border-hover: #cbd5e1;
+  
+  --ui-text-main: #334155;
+  --ui-text-muted: #64748b;
+  
+  --ui-accent: #3b82f6;
+  --ui-accent-bg: #eff6ff;
+  
+  --ui-danger-bg: #fee2e2;
+  --ui-danger-text: #ef4444;
+}
+
+[data-theme="dark"] {
+  /* DARK THEME (Calm slate) */
+  --ui-bg-shell: #0f172a;
+  --ui-bg-panel: #1e293b;
+  --ui-bg-hover: #334155;
+  --ui-bg-active: #475569;
+  
+  --ui-border: #334155;
+  --ui-border-hover: #475569;
+  
+  --ui-text-main: #f8fafc;
+  --ui-text-muted: #94a3b8;
+  
+  --ui-accent: #38bdf8;
+  --ui-accent-bg: rgba(56, 189, 248, 0.1);
+  
+  --ui-danger-bg: rgba(239, 68, 68, 0.15);
+  --ui-danger-text: #fca5a5;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--ui-bg-shell);
+  color: var(--ui-text-main);
+}
+
+/* ─── SHELL LAYOUT ─────────────────────────────────────────── */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ─── CANVAS ─────────────────────────────────────────────────── */
+.canvas-area {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--ui-bg-shell);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 24px;
+}
+
+.canvas-inner {
+  /* Scale wrapper so A4 fits nicely at screen size */
+  transform-origin: top center;
+}
+
+#resume-root {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* ─── PRINT ─────────────────────────────────────────────────── */
+.print-only { display: none; }
+
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block; }
+
+  html, body, #root {
+    height: auto;
+    background: white;
+    overflow: visible;
+  }
+
+  .app-shell {
+    height: auto;
+    display: block;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}

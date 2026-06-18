@@ -1,0 +1,132 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  background: var(--ui-bg-panel);
+  border-bottom: 1px solid var(--ui-border);
+  padding: 0 16px;
+  color: var(--ui-text-main);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.topbar-logo-icon {
+  color: var(--ui-accent);
+}
+
+.topbar-logo-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ui-text-main);
+  letter-spacing: -0.3px;
+}
+
+.topbar-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--ui-border);
+}
+
+.topbar-resume-name {
+  font-size: 0.85rem;
+  color: var(--ui-text-muted);
+  font-weight: 500;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--ui-border);
+  background: var(--ui-bg-panel);
+  color: var(--ui-text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.topbar-btn:hover:not(:disabled) {
+  background: var(--ui-bg-hover);
+  color: var(--ui-text-main);
+  border-color: var(--ui-border-hover);
+}
+
+.topbar-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.topbar-btn.icon-only {
+  padding: 6px;
+}
+
+.topbar-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.topbar-btn.danger-btn {
+  padding: 6px 10px;
+  color: var(--ui-text-muted);
+}
+
+.topbar-btn.danger-btn:hover {
+  background: var(--ui-danger-bg);
+  border-color: var(--ui-danger-bg);
+  color: var(--ui-danger-text);
+}
+
+.topbar-btn.export-btn {
+  background: #1d4ed8;
+  border-color: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+.topbar-btn.export-btn:hover:not(:disabled) {
+  background: #2563eb;
+  border-color: #3b82f6;
+}
+
+.topbar-btn.export-btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.topbar-btn.export-btn:disabled {
+  cursor: not-allowed;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}

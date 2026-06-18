@@ -1,0 +1,271 @@
+/* Base editable element — all editable regions */
+.ie {
+  cursor: text;
+  border-radius: 2px;
+  transition: background 0.1s, outline 0.1s;
+  outline: 1.5px solid transparent;
+  outline-offset: 2px;
+  min-width: 12px;
+  display: inline;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Block-level variant (use on p, div etc.) */
+.ie.block {
+  display: block;
+}
+
+/* Hover: show edit affordance */
+.ie:hover {
+  background: rgba(59, 130, 246, 0.07);
+  outline-color: rgba(59, 130, 246, 0.35);
+}
+
+/* Focus: clear active editing indicator */
+.ie:focus {
+  background: rgba(59, 130, 246, 0.1);
+  outline-color: rgba(59, 130, 246, 0.65);
+  outline-style: solid;
+}
+
+/* Placeholder when empty */
+.ie:empty::before {
+  content: attr(data-placeholder);
+  color: #94a3b8;
+  pointer-events: none;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* During export: suppress all editing styles and remove UI controls */
+.is-exporting .ie {
+  outline: none !important;
+  background: transparent !important;
+  cursor: default;
+}
+
+.is-exporting .ie:empty::before {
+  display: none !important;
+  content: none !important;
+}
+
+.is-exporting .add-item-btn,
+.is-exporting .section-add-entry,
+.is-exporting .ie-bullet-del,
+.is-exporting .ie-add-bullet,
+.is-exporting .del-entry-btn {
+  display: none !important;
+}
+
+.is-exporting .edit-block {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ─── ADD ITEM BUTTON ─────────────────────────────────────── */
+.add-item-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  margin-top: 6px;
+  font-size: 8pt;
+  color: #94a3b8;
+  border: 1px dashed #cbd5e1;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  width: fit-content;
+  opacity: 0;
+  font-family: inherit;
+}
+
+.edit-block:hover .add-item-btn,
+.add-item-btn:focus {
+  opacity: 1;
+}
+
+.add-item-btn:hover {
+  color: #3b82f6;
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.06);
+}
+
+/* ─── SECTION ADD BUTTON ──────────────────────────────────── */
+.section-add-entry {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  padding: 4px 10px;
+  font-size: 8pt;
+  font-weight: 600;
+  color: #94a3b8;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.15s;
+  opacity: 0;
+  font-family: inherit;
+}
+
+.edit-section:hover .section-add-entry,
+.section-add-entry:focus {
+  opacity: 1;
+}
+
+.section-add-entry:hover {
+  color: #3b82f6;
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.06);
+}
+
+/* ─── BULLET LIST ─────────────────────────────────────────── */
+.ie-bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.ie-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.ie-bullet-item::before {
+  content: '•';
+  position: absolute;
+  left: 3px;
+  top: 0;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.ie-bullet-text {
+  flex: 1;
+  outline: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-width: 20px;
+}
+
+.ie-bullet-text:hover {
+  background: rgba(59, 130, 246, 0.07);
+  border-radius: 2px;
+}
+
+.ie-bullet-text:focus {
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 2px;
+}
+
+.ie-bullet-del {
+  position: absolute;
+  right: -18px;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.1s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.ie-bullet-item:hover .ie-bullet-del {
+  opacity: 1;
+}
+
+.ie-bullet-del:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.ie-add-bullet {
+  margin-left: 14px;
+  margin-top: 3px;
+  font-size: 7.5pt;
+  color: #94a3b8;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.edit-block:hover .ie-add-bullet {
+  opacity: 1;
+}
+
+.ie-add-bullet:hover {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.07);
+}
+
+/* ─── SECTION-LEVEL HOVER ─────────────────────────────────── */
+.edit-section {
+  position: relative;
+}
+
+.edit-block {
+  position: relative;
+  border-radius: 3px;
+  padding: 1px;
+  margin: -1px;
+  transition: background 0.1s;
+}
+
+.edit-block:hover {
+  background: rgba(59, 130, 246, 0.025);
+  outline: 1px dashed rgba(59, 130, 246, 0.2);
+  outline-offset: 2px;
+}
+
+/* ─── DELETE ENTRY BUTTON ─────────────────────────────────── */
+.del-entry-btn {
+  position: absolute;
+  top: 2px;
+  right: -22px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.1s;
+  padding: 0;
+}
+
+.edit-block:hover .del-entry-btn {
+  opacity: 1;
+}
+
+.del-entry-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}

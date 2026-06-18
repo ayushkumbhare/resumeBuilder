@@ -1,0 +1,225 @@
+.preview-container {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #cbd5e1; /* A neutral background behind the paper */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+/* The A4 Page simulation */
+.resume-page {
+  background: white;
+  width: 210mm;
+  min-height: 297mm;
+  padding: var(--doc-margin-top) var(--doc-margin-right) var(--doc-margin-bottom) var(--doc-margin-left);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  font-family: var(--font-family, Helvetica, sans-serif);
+  color: var(--text, #1E293B);
+  position: relative;
+  line-height: var(--line-height);
+}
+
+/* Base text properties mapped from styles */
+.resume-header {
+  text-align: var(--header-align);
+  margin-bottom: var(--section-spacing);
+}
+
+/* Standard Layout Styles */
+.resume-page.standard .resume-header h1 {
+  font-size: var(--title-size);
+  color: var(--primary, #0F2A4A);
+  margin: 0 0 4px 0;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.resume-page.standard .contact-info {
+  font-size: calc(var(--body-size) - 0.5pt);
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+.resume-page.standard .resume-section {
+  margin-bottom: var(--section-spacing);
+}
+
+.resume-page.standard .resume-section h2 {
+  font-size: calc(var(--body-size) + 1pt);
+  color: var(--primary, #0F2A4A);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+  border-bottom: 1px solid #CBD5E1;
+  padding-bottom: 2px;
+}
+
+.resume-page.standard .section-content {
+  padding-top: 4px;
+}
+
+.summary-text {
+  font-size: var(--body-size);
+  margin: 0;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.skill-row {
+  display: flex;
+  font-size: var(--body-size);
+}
+
+.skill-key {
+  font-weight: 700;
+  color: var(--primary, #0F2A4A);
+  width: 55mm;
+  flex-shrink: 0;
+}
+
+.skill-val {
+  color: var(--text, #1E293B);
+}
+
+.experience-item, .project-item, .education-item {
+  margin-bottom: 8px;
+}
+
+.experience-header, .education-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.exp-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 45mm;
+  flex-shrink: 0;
+}
+
+.company-name {
+  font-size: calc(var(--body-size) + 1pt);
+  font-weight: 700;
+  color: var(--text, #1E293B);
+}
+
+.job-title, .job-location, .job-period {
+  font-size: var(--body-size);
+  color: #6B7280;
+}
+
+.bullet-list {
+  margin: 0;
+  padding-left: 12px;
+  list-style-type: disc;
+}
+
+.standard-bullet {
+  font-size: calc(var(--body-size) - 0.2pt);
+  margin-bottom: 1.5px;
+  color: var(--text, #1E293B);
+}
+
+.project-title-bullet {
+  list-style-type: none;
+  margin-left: -12px;
+  font-size: calc(var(--body-size) + 0.5pt);
+  color: var(--accent, #1A6FC4);
+  font-weight: 700;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.project-header {
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.proj-title {
+  font-size: calc(var(--body-size) + 0.5pt);
+  color: var(--accent, #1A6FC4);
+  font-weight: 700;
+}
+
+.proj-subtitle {
+  font-size: calc(var(--body-size) - 0.5pt);
+  color: #6B7280;
+}
+
+
+/* Modern Layout Variation Example */
+.resume-page.modern {
+  padding-top: 0;
+}
+.resume-page.modern .resume-header {
+  background: var(--primary, #0F2A4A);
+  color: white;
+  margin-left: -18mm;
+  margin-right: -18mm;
+  padding: 18mm 18mm 10mm 18mm;
+  text-align: left;
+}
+.resume-page.modern .resume-header h1 {
+  color: white;
+  margin-bottom: 8px;
+}
+.resume-page.modern .contact-info {
+  color: rgba(255,255,255,0.8);
+  text-align: left;
+}
+.resume-page.modern .resume-section h2 {
+  color: var(--accent, #1A6FC4);
+  border-bottom-width: 2px;
+  border-bottom-color: var(--primary, #0F2A4A);
+}
+
+
+/* --- Print Media Query for PDF Export --- */
+@media print {
+  /* Hide the editor sidebar */
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  .preview-container {
+    padding: 0;
+    background: transparent;
+    height: auto;
+    overflow: visible;
+  }
+
+  .resume-page {
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+    /* Let the browser handle the page size natively */
+    padding: var(--doc-margin-top) var(--doc-margin-right) var(--doc-margin-bottom) var(--doc-margin-left);
+  }
+  
+  @page {
+    size: A4;
+    margin: 0; /* Removing browser default margins so our padding handles it */
+  }
+}

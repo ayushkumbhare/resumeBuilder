@@ -1,0 +1,186 @@
+.mo-page {
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  font-family: var(--mo-font, 'Inter', sans-serif);
+  font-size: 9pt;
+  box-sizing: border-box;
+  color: #1a1a2e;
+}
+
+/* HEADER */
+.mo-header {
+  background: var(--mo-primary, #0F2A4A);
+  padding: 9mm 10mm 7mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 4px solid var(--mo-accent, #1A6FC4);
+}
+
+.mo-header-left {}
+
+.mo-name {
+  font-size: 20pt;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 2px;
+  letter-spacing: -0.3px;
+  line-height: 1.1;
+}
+
+.mo-headline {
+  font-size: 9.5pt;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.mo-header-right {
+  text-align: right;
+}
+
+.mo-contact {
+  font-size: 7.5pt;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+
+/* BODY - 2 column grid */
+.mo-body {
+  display: grid;
+  grid-template-columns: 72mm 1fr;
+  min-height: calc(297mm - 40mm);
+}
+
+/* LEFT COLUMN */
+.mo-left {
+  background: #f8fafc;
+  padding: 7mm 6mm 7mm 8mm;
+  border-right: 1px solid #e2e8f0;
+}
+
+/* RIGHT COLUMN */
+.mo-right {
+  padding: 7mm 8mm 7mm 7mm;
+}
+
+/* SECTIONS */
+.mo-section {
+  margin-bottom: 9px;
+}
+
+.mo-section-title {
+  font-size: 7.5pt;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--mo-accent, #1A6FC4);
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid var(--mo-accent, #1A6FC4);
+}
+
+.mo-body-text {
+  font-size: 8.5pt;
+  line-height: 1.55;
+  color: #374151;
+  margin: 0;
+}
+
+/* LEFT COLUMN CONTENT */
+.mo-skill {
+  margin-bottom: 6px;
+}
+
+.mo-skill-cat {
+  font-size: 8pt;
+  font-weight: 700;
+  color: var(--mo-primary, #0F2A4A);
+  margin: 0 0 1px;
+}
+
+.mo-skill-items {
+  font-size: 7.5pt;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.mo-edu {
+  margin-bottom: 7px;
+}
+
+.mo-edu-inst {
+  font-size: 8pt;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.mo-edu-deg {
+  font-size: 8pt;
+  color: #374151;
+  margin: 1px 0 0;
+}
+
+.mo-edu-period {
+  font-size: 7.5pt;
+  color: #9ca3af;
+  margin: 1px 0 0;
+}
+
+.mo-resp {
+  font-size: 8pt;
+  color: #374151;
+  line-height: 1.45;
+  margin: 0 0 4px;
+}
+
+/* RIGHT COLUMN CONTENT */
+.mo-exp {
+  margin-bottom: 8px;
+  page-break-inside: avoid;
+}
+
+.mo-exp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.mo-company {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: #111827;
+}
+
+.mo-period {
+  font-size: 7.5pt;
+  color: #9ca3af;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.mo-job-title {
+  font-size: 8.5pt;
+  color: var(--mo-accent, #1A6FC4);
+  font-weight: 600;
+  margin: 1px 0 3px;
+}
+
+.mo-bullets {
+  margin: 2px 0 0;
+  padding-left: 13px;
+  font-size: 8.5pt;
+  line-height: 1.45;
+  color: #374151;
+}
+
+.mo-bullets li {
+  margin-bottom: 1.5px;
+}

@@ -1,0 +1,147 @@
+.ex-page {
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  font-family: 'Georgia', 'Merriweather', serif;
+  font-size: 9.5pt;
+  color: #1a1a1a;
+  padding: 13mm 18mm 13mm;
+  box-sizing: border-box;
+  line-height: 1.45;
+}
+
+/* HEADER */
+.ex-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.ex-name {
+  font-size: 24pt;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 3px;
+}
+
+.ex-headline {
+  font-size: 9pt;
+  font-style: italic;
+  color: #555;
+  margin: 0 0 5px;
+  font-weight: 400;
+}
+
+.ex-rule-double {
+  border-top: 3px double #1a1a1a;
+  margin: 5px 0;
+}
+
+.ex-rule-single {
+  border-top: 1px solid #888;
+  margin: 5px 0 0;
+}
+
+.ex-contacts {
+  font-size: 8pt;
+  color: #444;
+  margin: 3px 0;
+  letter-spacing: 0.2px;
+}
+
+/* SECTIONS */
+.ex-section {
+  margin-top: 10px;
+}
+
+.ex-section-title {
+  font-size: 9.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.ex-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #1a1a1a;
+}
+
+.ex-summary {
+  font-size: 9pt;
+  line-height: 1.55;
+  color: #222;
+  font-style: italic;
+  margin: 0;
+}
+
+/* EXPERIENCE */
+.ex-exp {
+  margin-bottom: 7px;
+}
+
+.ex-exp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.ex-company {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+.ex-period {
+  font-size: 8.5pt;
+  color: #555;
+  font-style: italic;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.ex-job-title {
+  font-size: 9pt;
+  color: #444;
+  font-style: italic;
+  margin: 1px 0 3px;
+}
+
+.ex-bullets {
+  margin: 3px 0 0;
+  padding-left: 16px;
+  font-size: 9pt;
+  line-height: 1.45;
+  color: #222;
+}
+
+.ex-bullets li {
+  margin-bottom: 1.5px;
+}
+
+/* SKILLS */
+.ex-skill-row {
+  display: flex;
+  font-size: 9pt;
+  margin-bottom: 2px;
+}
+
+.ex-skill-key {
+  font-weight: 700;
+  font-style: italic;
+  width: 52mm;
+  flex-shrink: 0;
+  color: #1a1a1a;
+}
+
+.ex-skill-val {
+  color: #333;
+}

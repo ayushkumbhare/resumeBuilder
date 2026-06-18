@@ -1,0 +1,136 @@
+.mn-page {
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  font-family: var(--mn-font, 'Inter', sans-serif);
+  font-size: 9pt;
+  color: #111;
+  padding: 14mm 20mm;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.mn-header {
+  margin-bottom: 14px;
+}
+
+.mn-name {
+  font-size: 26pt;
+  font-weight: 300;
+  color: #111;
+  letter-spacing: -0.5px;
+  margin: 0 0 1px;
+  line-height: 1.1;
+}
+
+.mn-headline {
+  font-size: 10pt;
+  color: #555;
+  margin: 0 0 4px;
+  font-weight: 400;
+}
+
+.mn-contacts {
+  font-size: 8pt;
+  color: #777;
+  margin: 0 0 6px;
+}
+
+.mn-accent-line {
+  height: 2px;
+  background: var(--mn-accent, #1A6FC4);
+  width: 40mm;
+}
+
+/* SUMMARY */
+.mn-summary {
+  font-size: 9pt;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* SECTIONS */
+.mn-section {
+  margin-top: 12px;
+}
+
+.mn-section-title {
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #777;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ENTRIES */
+.mn-entry {
+  margin-bottom: 7px;
+}
+
+.mn-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.mn-entry-title {
+  font-size: 9.5pt;
+  font-weight: 600;
+  color: #111;
+}
+
+.mn-sep {
+  color: #aaa;
+}
+
+.mn-entry-org {
+  font-size: 9pt;
+  color: var(--mn-accent, #1A6FC4);
+}
+
+.mn-meta {
+  font-size: 8.5pt;
+  color: #777;
+}
+
+.mn-date {
+  font-size: 8pt;
+  color: #999;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* BULLETS */
+.mn-bullets {
+  margin: 2px 0 0;
+  padding-left: 14px;
+  font-size: 8.5pt;
+  line-height: 1.5;
+  color: #333;
+}
+
+.mn-bullets li {
+  margin-bottom: 1.5px;
+}
+
+/* SKILLS */
+.mn-skill-line {
+  font-size: 8.5pt;
+  margin: 0 0 2px;
+  line-height: 1.4;
+}
+
+.mn-skill-cat {
+  font-weight: 700;
+  color: #111;
+}
+
+.mn-skill-items {
+  color: #444;
+}

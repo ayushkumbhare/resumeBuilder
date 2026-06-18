@@ -1,0 +1,57 @@
+.lp-json-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  background-color: #0f172a;
+}
+
+.lp-json-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #7f1d1d;
+  color: #fca5a5;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-family: system-ui, -apple-system, sans-serif;
+  border-bottom: 1px solid #450a0a;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.lp-error-icon {
+  font-size: 14px;
+}
+
+.lp-json-scroll-area {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+.lp-json-editor-core {
+  min-height: 100%;
+  color: #d4d4d4; /* Default text color for dark theme */
+}
+
+.lp-json-editor-core textarea {
+  outline: none !important;
+}
+
+/* Custom scrollbar for dark mode */
+.lp-json-scroll-area::-webkit-scrollbar { 
+  width: 12px; 
+  height: 12px; 
+}
+.lp-json-scroll-area::-webkit-scrollbar-track { 
+  background: transparent; 
+}
+.lp-json-scroll-area::-webkit-scrollbar-thumb { 
+  background: #334155; 
+  border: 3px solid #0f172a; 
+  border-radius: 8px; 
+}
+.lp-json-scroll-area::-webkit-scrollbar-thumb:hover { 
+  background: #475569; 
+}
