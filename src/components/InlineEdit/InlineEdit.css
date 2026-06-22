@@ -6,7 +6,6 @@
   outline: 1.5px solid transparent;
   outline-offset: 2px;
   min-width: 12px;
-  display: inline;
   white-space: pre-wrap;
   word-break: break-word;
 }
@@ -167,10 +166,21 @@
   border-radius: 2px;
 }
 
-.ie-bullet-del {
+.ie-bullet-actions {
   position: absolute;
-  right: -18px;
+  right: -38px;
   top: 1px;
+  display: flex;
+  gap: 2px;
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+.ie-bullet-item:hover .ie-bullet-actions {
+  opacity: 1;
+}
+
+.ie-bullet-btn {
   width: 16px;
   height: 16px;
   border-radius: 3px;
@@ -182,19 +192,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: all 0.1s;
-  flex-shrink: 0;
   padding: 0;
 }
 
-.ie-bullet-item:hover .ie-bullet-del {
-  opacity: 1;
+.ie-bullet-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
 }
 
-.ie-bullet-del:hover {
+.ie-bullet-btn.ie-bullet-del:hover {
   background: #fee2e2;
   color: #dc2626;
+}
+
+.ie-bullet-item.is-subheading {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.ie-bullet-item.is-subheading::before {
+  content: none;
+}
+
+.ie-bullet-item.is-subheading .ie-bullet-text {
+  font-weight: 700;
 }
 
 .ie-add-bullet {

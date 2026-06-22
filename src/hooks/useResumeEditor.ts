@@ -25,6 +25,14 @@ export function useResumeEditor(setData: React.Dispatch<React.SetStateAction<Res
         : e),
     }));
 
+  const toggleExpBulletSubheading = (expId: string, bId: string) =>
+    setData(prev => ({
+      ...prev,
+      experience: prev.experience.map(e => e.id === expId
+        ? { ...e, bullets: e.bullets.map(b => b.id === bId ? { ...b, isSubheading: !b.isSubheading } : b) }
+        : e),
+    }));
+
   const removeExpBullet = (expId: string, bId: string) =>
     setData(prev => ({
       ...prev,
@@ -56,6 +64,14 @@ export function useResumeEditor(setData: React.Dispatch<React.SetStateAction<Res
       ...prev,
       projects: prev.projects.map(p => p.id === projId
         ? { ...p, bullets: p.bullets.map(b => b.id === bId ? { ...b, text } : b) }
+        : p),
+    }));
+
+  const toggleProjBulletSubheading = (projId: string, bId: string) =>
+    setData(prev => ({
+      ...prev,
+      projects: prev.projects.map(p => p.id === projId
+        ? { ...p, bullets: p.bullets.map(b => b.id === bId ? { ...b, isSubheading: !b.isSubheading } : b) }
         : p),
     }));
 
@@ -113,8 +129,8 @@ export function useResumeEditor(setData: React.Dispatch<React.SetStateAction<Res
 
   return {
     updatePersonal,
-    updateExp, addExpBullet, updateExpBullet, removeExpBullet, addExperience, removeExperience,
-    updateProj, addProjBullet, updateProjBullet, removeProjBullet, addProject, removeProject,
+    updateExp, addExpBullet, updateExpBullet, toggleExpBulletSubheading, removeExpBullet, addExperience, removeExperience,
+    updateProj, addProjBullet, updateProjBullet, toggleProjBulletSubheading, removeProjBullet, addProject, removeProject,
     updateEdu, addEducation, removeEducation,
     updateSkill, addSkill, removeSkill,
     updateResp, addResp, removeResp,

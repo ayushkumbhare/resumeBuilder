@@ -1,5 +1,6 @@
 import type { ResumeData, StyleOptions } from '../../types';
 import { InlineEdit } from '../../components/InlineEdit/InlineEdit';
+import { BulletList } from '../../components/InlineEdit/BulletList';
 import { useResumeEditor } from '../../hooks/useResumeEditor';
 import './Startup.css';
 
@@ -106,15 +107,12 @@ export function Startup({ data, styles, setData }: StartupProps) {
                   <InlineEdit tag="span" value={exp.period} onChange={v => ed.updateExp(exp.id, 'period', v)} placeholder="Period" />
                 </div>
               </div>
-              <ul className="ie-bullet-list st-bullets">
-                {exp.bullets.filter(b => b.visible).map(b => (
-                  <li key={b.id} className="ie-bullet-item">
-                    <button className="ie-bullet-del no-print" onClick={() => ed.removeExpBullet(exp.id, b.id)}>×</button>
-                    <InlineEdit tag="div" multiline className="ie-bullet-text" value={b.text} onChange={v => ed.updateExpBullet(exp.id, b.id, v)} placeholder="Experience detail" />
-                  </li>
-                ))}
-              </ul>
-              <button className="ie-add-bullet no-print" onClick={() => ed.addExpBullet(exp.id)}>+ Add bullet</button>
+              <BulletList bullets={exp.bullets} className="st-bullets" liClassName="st-bullet-li"
+                onUpdate={(bId, t) => ed.updateExpBullet(exp.id, bId, t)}
+                onAdd={() => ed.addExpBullet(exp.id)}
+                onRemove={(bId) => ed.removeExpBullet(exp.id, bId)}
+                onToggleSubheading={(bId) => ed.toggleExpBulletSubheading(exp.id, bId)}
+              />
             </div>
           ))}
           <button className="section-add-entry no-print" onClick={() => ed.addExperience()}>+ Add Experience</button>
@@ -139,15 +137,12 @@ export function Startup({ data, styles, setData }: StartupProps) {
                     <InlineEdit tag="span" value={proj.link} onChange={v => ed.updateProj(proj.id, 'link', v)} placeholder="Link" />
                   </div>
                 </div>
-                <ul className="ie-bullet-list st-bullets">
-                  {proj.bullets.filter(b => b.visible).map(b => (
-                    <li key={b.id} className="ie-bullet-item">
-                      <button className="ie-bullet-del no-print" onClick={() => ed.removeProjBullet(proj.id, b.id)}>×</button>
-                      <InlineEdit tag="div" multiline className="ie-bullet-text" value={b.text} onChange={v => ed.updateProjBullet(proj.id, b.id, v)} placeholder="Project detail" />
-                    </li>
-                  ))}
-                </ul>
-                <button className="ie-add-bullet no-print" onClick={() => ed.addProjBullet(proj.id)}>+ Add bullet</button>
+                <BulletList bullets={proj.bullets} className="st-bullets" liClassName="st-bullet-li"
+                  onUpdate={(bId, t) => ed.updateProjBullet(proj.id, bId, t)}
+                  onAdd={() => ed.addProjBullet(proj.id)}
+                  onRemove={(bId) => ed.removeProjBullet(proj.id, bId)}
+                  onToggleSubheading={(bId) => ed.toggleProjBulletSubheading(proj.id, bId)}
+                />
               </div>
             ))}
             <button className="section-add-entry no-print" onClick={() => ed.addProject()}>+ Add Project</button>

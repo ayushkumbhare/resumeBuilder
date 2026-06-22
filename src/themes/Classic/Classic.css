@@ -75,7 +75,7 @@
 .cl-skill-key {
   font-weight: 700;
   color: var(--cl-primary, #0F2A4A);
-  width: 52mm;
+  width: 42mm;
   flex-shrink: 0;
 }
 

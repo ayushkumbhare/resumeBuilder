@@ -50,6 +50,7 @@ export function Minimal({ data, styles, setData }: ThemeProps) {
                 onUpdate={(bId, t) => ed.updateExpBullet(exp.id, bId, t)}
                 onAdd={() => ed.addExpBullet(exp.id)}
                 onRemove={(bId) => ed.removeExpBullet(exp.id, bId)}
+                onToggleSubheading={(bId) => ed.toggleExpBulletSubheading(exp.id, bId)}
               />
               <button className="del-entry-btn" onClick={() => ed.removeExperience(exp.id)} title="Remove">×</button>
             </div>
@@ -73,6 +74,7 @@ export function Minimal({ data, styles, setData }: ThemeProps) {
                 onUpdate={(bId, t) => ed.updateProjBullet(proj.id, bId, t)}
                 onAdd={() => ed.addProjBullet(proj.id)}
                 onRemove={(bId) => ed.removeProjBullet(proj.id, bId)}
+                onToggleSubheading={(bId) => ed.toggleProjBulletSubheading(proj.id, bId)}
               />
               <button className="del-entry-btn" onClick={() => ed.removeProject(proj.id)} title="Remove">×</button>
             </div>

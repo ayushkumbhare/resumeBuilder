@@ -14,6 +14,7 @@ export interface BulletItem {
   id: string;
   text: string;
   visible: boolean;
+  isSubheading?: boolean;
 }
 
 export interface ExperienceItem {
