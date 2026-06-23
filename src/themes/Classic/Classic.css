@@ -3,22 +3,20 @@
   min-height: 297mm;
   background: #fff;
   font-family: var(--cl-font, 'Calibri', Arial, sans-serif);
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #1a1a1a;
-  padding: 14mm 18mm;
   box-sizing: border-box;
-  line-height: 1.4;
 }
 
 /* HEADER */
 .cl-header {
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .cl-name {
   display: block;
-  font-size: 22pt;
+  font-size: var(--name-size, 26pt);
   font-weight: 700;
   color: var(--cl-primary, #0F2A4A);
   letter-spacing: 1.5px;
@@ -28,14 +26,14 @@
 
 .cl-headline {
   display: block;
-  font-size: 10pt;
+  font-size: var(--body-size, 9.5pt);
   color: #555;
   margin: 0 0 4px;
   font-weight: 400;
 }
 
 .cl-contacts {
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #444;
   margin: 0;
   line-height: 1.5;
@@ -43,11 +41,11 @@
 
 /* SECTION */
 .cl-section {
-  margin-top: 10px;
+  margin-top: var(--section-spacing, 10px);
 }
 
 .cl-section-title {
-  font-size: 9.5pt;
+  font-size: var(--heading-size, 9.5pt);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -58,25 +56,29 @@
 }
 
 .cl-body {
-  font-size: 9pt;
-  line-height: 1.5;
+  font-size: var(--body-size, 9.5pt);
   color: #222;
   margin: 0;
 }
 
 /* SKILLS */
 .cl-skill-row {
-  display: flex;
-  font-size: 9pt;
+  display: grid;
+  grid-template-columns: 42mm auto 1fr;
+  gap: 6px;
+  font-size: var(--body-size, 9.5pt);
   margin-bottom: 2px;
-  line-height: 1.45;
 }
 
 .cl-skill-key {
   font-weight: 700;
   color: var(--cl-primary, #0F2A4A);
-  width: 42mm;
-  flex-shrink: 0;
+}
+
+.cl-skill-colon {
+  font-weight: 700;
+  color: var(--cl-primary, #0F2A4A);
+  text-align: center;
 }
 
 .cl-skill-val {
@@ -95,19 +97,19 @@
 }
 
 .cl-company {
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9.5pt);
   font-weight: 700;
   color: #111;
 }
 
 .cl-meta {
   font-weight: 400;
-  font-size: 9pt;
+  font-size: var(--body-size, 9.5pt);
   color: #555;
 }
 
 .cl-period {
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #555;
   white-space: nowrap;
   flex-shrink: 0;
@@ -115,7 +117,7 @@
 }
 
 .cl-job-title {
-  font-size: 9pt;
+  font-size: var(--body-size, 9.5pt);
   color: #444;
   font-style: italic;
   margin: 1px 0 3px;
@@ -125,8 +127,7 @@
 .cl-bullets {
   margin: 3px 0 0 0;
   padding-left: 14px;
-  font-size: 9pt;
-  line-height: 1.45;
+  font-size: var(--body-size, 9.5pt);
   color: #222;
 }
 

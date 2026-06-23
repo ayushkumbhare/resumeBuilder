@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",
-    "html2canvas": "^1.4.1",
-    "jspdf": "^4.2.1",
+    "@react-pdf/renderer": "^4.5.1",
     "lucide-react": "^1.20.0",
     "prismjs": "^1.30.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-pdf-html": "^2.1.5",
     "react-simple-code-editor": "^0.14.1"
   },
   "devDependencies": {

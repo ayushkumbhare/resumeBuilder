@@ -11,6 +11,12 @@ export function Slate({ data, styles, setData }: ThemeProps) {
     '--sl-primary': styles.primaryColor,
     '--sl-accent': styles.accentColor,
     '--sl-font': styles.fontFamily,
+    '--body-size': `${(styles.bodyFontSize || 9.5) + (styles.globalFontScale || 0)}pt`,
+    '--heading-size': `${(styles.headingSize || 12) + (styles.globalFontScale || 0)}pt`,
+    '--name-size': `${(styles.nameSize || 22) + (styles.globalFontScale || 0)}pt`,
+    lineHeight: styles.lineHeight || 1.45,
+    '--section-spacing': `${styles.sectionSpacing ?? 10}px`,
+    '--doc-margin': `${styles.documentMargin || 10}mm`,
   } as React.CSSProperties;
 
   return (

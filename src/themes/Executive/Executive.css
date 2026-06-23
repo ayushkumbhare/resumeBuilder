@@ -2,12 +2,10 @@
   width: 210mm;
   min-height: 297mm;
   background: #fff;
-  font-family: 'Georgia', 'Merriweather', serif;
-  font-size: 9.5pt;
+  font-family: var(--ex-font, 'Georgia', 'Merriweather', serif);
+  font-size: var(--body-size, 9.5pt);
   color: #1a1a1a;
-  padding: 13mm 18mm 13mm;
   box-sizing: border-box;
-  line-height: 1.45;
 }
 
 /* HEADER */
@@ -17,7 +15,7 @@
 }
 
 .ex-name {
-  font-size: 24pt;
+  font-size: var(--name-size, 24pt);
   font-weight: 700;
   color: #1a1a1a;
   letter-spacing: 3px;
@@ -26,7 +24,7 @@
 }
 
 .ex-headline {
-  font-size: 9pt;
+  font-size: var(--body-size, 9.5pt);
   font-style: italic;
   color: #555;
   margin: 0 0 5px;
@@ -44,7 +42,7 @@
 }
 
 .ex-contacts {
-  font-size: 8pt;
+  font-size: var(--body-size, 9.5pt);
   color: #444;
   margin: 3px 0;
   letter-spacing: 0.2px;
@@ -52,11 +50,11 @@
 
 /* SECTIONS */
 .ex-section {
-  margin-top: 10px;
+  margin-top: var(--section-spacing, 10px);
 }
 
 .ex-section-title {
-  font-size: 9.5pt;
+  font-size: var(--heading-size, 9.5pt);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -75,8 +73,7 @@
 }
 
 .ex-summary {
-  font-size: 9pt;
-  line-height: 1.55;
+  font-size: var(--body-size, 9.5pt);
   color: #222;
   font-style: italic;
   margin: 0;
@@ -94,14 +91,14 @@
 }
 
 .ex-company {
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9.5pt);
   font-weight: 700;
   color: #1a1a1a;
   letter-spacing: 0.5px;
 }
 
 .ex-period {
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #555;
   font-style: italic;
   flex-shrink: 0;
@@ -109,7 +106,7 @@
 }
 
 .ex-job-title {
-  font-size: 9pt;
+  font-size: var(--body-size, 9.5pt);
   color: #444;
   font-style: italic;
   margin: 1px 0 3px;
@@ -118,8 +115,7 @@
 .ex-bullets {
   margin: 3px 0 0;
   padding-left: 16px;
-  font-size: 9pt;
-  line-height: 1.45;
+  font-size: var(--body-size, 9.5pt);
   color: #222;
 }
 
@@ -130,7 +126,7 @@
 /* SKILLS */
 .ex-skill-row {
   display: flex;
-  font-size: 9pt;
+  font-size: var(--body-size, 9.5pt);
   margin-bottom: 2px;
 }
 

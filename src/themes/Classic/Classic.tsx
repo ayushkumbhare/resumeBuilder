@@ -11,6 +11,12 @@ export function Classic({ data, styles, setData }: ThemeProps) {
     '--cl-primary': styles.primaryColor,
     '--cl-accent': styles.accentColor,
     '--cl-font': styles.fontFamily,
+    '--body-size': `${(styles.bodyFontSize || 9.5) + (styles.globalFontScale || 0)}pt`,
+    '--heading-size': `${(styles.headingSize || 12) + (styles.globalFontScale || 0)}pt`,
+    '--name-size': `${(styles.nameSize || 22) + (styles.globalFontScale || 0)}pt`,
+    lineHeight: styles.lineHeight || 1.4,
+    '--section-spacing': `${styles.sectionSpacing ?? 10}px`,
+    padding: `${styles.documentMargin || 14}mm 18mm`,
   } as React.CSSProperties;
 
 
@@ -20,7 +26,7 @@ export function Classic({ data, styles, setData }: ThemeProps) {
       {/* HEADER */}
       <header className="cl-header edit-section">
         <InlineEdit tag="h1" className="cl-name" value={pi.name} onChange={v => ed.updatePersonal('name', v)} placeholder="Your Name" />
-        <InlineEdit tag="div" className="cl-headline" value={pi.headline} onChange={v => ed.updatePersonal('headline', v)} placeholder="Professional Headline" />
+        {pi.headline && <InlineEdit tag="div" className="cl-headline" value={pi.headline} onChange={v => ed.updatePersonal('headline', v)} placeholder="Professional Headline" />}
         <p className="cl-contacts">
           {['phone','email','linkedin','github','website','location'].map((f, i, arr) => {
             const val = (pi as any)[f];

@@ -3,9 +3,8 @@
   min-height: 297mm;
   background: #fff;
   font-family: var(--mn-font, 'Inter', sans-serif);
-  font-size: 9pt;
+  font-size: var(--body-size, 9.5pt);
   color: #111;
-  padding: 14mm 20mm;
   box-sizing: border-box;
 }
 
@@ -15,7 +14,7 @@
 }
 
 .mn-name {
-  font-size: 26pt;
+  font-size: var(--name-size, 26pt);
   font-weight: 300;
   color: #111;
   letter-spacing: -0.5px;
@@ -24,14 +23,14 @@
 }
 
 .mn-headline {
-  font-size: 10pt;
+  font-size: var(--body-size, 9.5pt);
   color: #555;
   margin: 0 0 4px;
   font-weight: 400;
 }
 
 .mn-contacts {
-  font-size: 8pt;
+  font-size: var(--body-size, 9.5pt);
   color: #777;
   margin: 0 0 6px;
 }
@@ -44,19 +43,18 @@
 
 /* SUMMARY */
 .mn-summary {
-  font-size: 9pt;
-  line-height: 1.6;
+  font-size: var(--body-size, 9.5pt);
   color: #333;
   margin: 0;
 }
 
 /* SECTIONS */
 .mn-section {
-  margin-top: 12px;
+  margin-top: var(--section-spacing, 12px);
 }
 
 .mn-section-title {
-  font-size: 7.5pt;
+  font-size: var(--heading-size, 7.5pt);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -80,7 +78,7 @@
 }
 
 .mn-entry-title {
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9.5pt);
   font-weight: 600;
   color: #111;
 }
@@ -90,17 +88,17 @@
 }
 
 .mn-entry-org {
-  font-size: 9pt;
+  font-size: var(--body-size, 9.5pt);
   color: var(--mn-accent, #1A6FC4);
 }
 
 .mn-meta {
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #777;
 }
 
 .mn-date {
-  font-size: 8pt;
+  font-size: var(--body-size, 9.5pt);
   color: #999;
   white-space: nowrap;
   flex-shrink: 0;
@@ -110,8 +108,7 @@
 .mn-bullets {
   margin: 2px 0 0;
   padding-left: 14px;
-  font-size: 8.5pt;
-  line-height: 1.5;
+  font-size: var(--body-size, 9.5pt);
   color: #333;
 }
 
@@ -121,14 +118,22 @@
 
 /* SKILLS */
 .mn-skill-line {
-  font-size: 8.5pt;
+  display: grid;
+  grid-template-columns: 45mm auto 1fr;
+  gap: 6px;
+  font-size: var(--body-size, 9.5pt);
   margin: 0 0 2px;
-  line-height: 1.4;
 }
 
 .mn-skill-cat {
   font-weight: 700;
   color: #111;
+}
+
+.mn-skill-colon {
+  font-weight: 700;
+  color: #111;
+  text-align: center;
 }
 
 .mn-skill-items {

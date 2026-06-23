@@ -94,4 +94,11 @@ export const initialStyle: StyleOptions = {
   primaryColor: '#0F2A4A',
   accentColor: '#1A6FC4',
   fontFamily: 'Inter, Arial, sans-serif',
+  bodyFontSize: 9.5,
+  headingSize: 12,
+  nameSize: 22,
+  globalFontScale: 0,
+  lineHeight: 1.4,
+  sectionSpacing: 10,
+  documentMargin: 14,
 };

@@ -93,15 +93,12 @@ export default function App() {
 
   const handleExport = async () => {
     (document.activeElement as HTMLElement)?.blur?.();
-    const root = document.getElementById('resume-root');
-    root?.classList.add('is-exporting');
-
     setExporting(true);
     try {
-      await new Promise(r => requestAnimationFrame(r));
-      await exportToPdf('resume-root', data.internalName || 'resume');
+      // Small delay to allow UI to show loading state
+      await new Promise(r => setTimeout(r, 50));
+      await exportToPdf(data, styles, data.internalName || 'resume');
     } finally {
-      root?.classList.remove('is-exporting');
       setExporting(false);
     }
   };

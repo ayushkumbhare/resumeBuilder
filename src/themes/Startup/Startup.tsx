@@ -17,6 +17,12 @@ export function Startup({ data, styles, setData }: StartupProps) {
     '--st-primary': styles.primaryColor,
     '--st-accent': styles.accentColor,
     '--st-font': styles.fontFamily,
+    '--body-size': `${(styles.bodyFontSize || 9.5) + (styles.globalFontScale || 0)}pt`,
+    '--heading-size': `${(styles.headingSize || 12) + (styles.globalFontScale || 0)}pt`,
+    '--name-size': `${(styles.nameSize || 22) + (styles.globalFontScale || 0)}pt`,
+    lineHeight: styles.lineHeight || 1.5,
+    '--section-spacing': `${styles.sectionSpacing ?? 12}px`,
+    padding: `${styles.documentMargin || 14}mm 20mm`,
   } as React.CSSProperties;
 
   return (

@@ -76,6 +76,13 @@ export interface StyleOptions {
   primaryColor: string;
   accentColor: string;
   fontFamily: string;
+  bodyFontSize: number;
+  headingSize: number;
+  nameSize: number;
+  globalFontScale: number;
+  lineHeight: number;
+  sectionSpacing: number;
+  documentMargin: number;
 }
 
 export interface ThemeProps {

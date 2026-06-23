@@ -11,6 +11,12 @@ export function Executive({ data, styles, setData }: ThemeProps) {
     '--ex-primary': styles.primaryColor,
     '--ex-accent': styles.accentColor,
     '--ex-font': styles.fontFamily,
+    '--body-size': `${(styles.bodyFontSize || 9.5) + (styles.globalFontScale || 0)}pt`,
+    '--heading-size': `${(styles.headingSize || 12) + (styles.globalFontScale || 0)}pt`,
+    '--name-size': `${(styles.nameSize || 24) + (styles.globalFontScale || 0)}pt`,
+    lineHeight: styles.lineHeight || 1.45,
+    '--section-spacing': `${styles.sectionSpacing ?? 10}px`,
+    padding: `${styles.documentMargin || 14}mm 18mm`,
   } as React.CSSProperties;
 
   const contacts = [pi.phone, pi.email, pi.linkedin, pi.github, pi.location].filter(Boolean);

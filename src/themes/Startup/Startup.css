@@ -4,7 +4,7 @@
   min-height: 297mm;
   background: #fff;
   font-family: var(--st-font, 'Outfit', 'Inter', sans-serif);
-  font-size: 9pt;
+  font-size: var(--body-size, 9pt);
   box-sizing: border-box;
 }
 
@@ -14,7 +14,7 @@
   background: #f8fafc;
   border-right: 1px solid #e2e8f0;
   color: #334155;
-  padding: 12mm 8mm;
+  padding: var(--doc-margin, 12mm) 8mm;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
 
 .st-name {
   display: block;
-  font-size: 22pt;
+  font-size: var(--name-size, 22pt);
   font-weight: 800;
   color: var(--st-primary, #0f172a);
   line-height: 1.1;
@@ -37,7 +37,7 @@
 
 .st-headline {
   display: block;
-  font-size: 10pt;
+  font-size: var(--body-size, 9pt);
   color: var(--st-accent, #3b82f6);
   font-weight: 600;
   margin: 0;
@@ -51,7 +51,7 @@
 }
 
 .st-sidebar-title {
-  font-size: 11pt;
+  font-size: var(--heading-size, 11pt);
   font-weight: 700;
   color: var(--st-primary, #0f172a);
   margin: 0 0 6px;
@@ -67,12 +67,12 @@
 .st-contact-item {
   display: flex;
   flex-direction: column;
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9pt);
   color: #475569;
 }
 
 .st-ci-label {
-  font-size: 7pt;
+  font-size: var(--body-size, 9pt);
   font-weight: 600;
   text-transform: uppercase;
   color: #94a3b8;
@@ -85,20 +85,20 @@
 }
 
 .st-edu-degree {
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9pt);
   font-weight: 700;
   color: #1e293b;
   margin: 0 0 2px;
 }
 
 .st-edu-inst {
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9pt);
   color: #475569;
   margin: 0 0 2px;
 }
 
 .st-edu-period {
-  font-size: 8pt;
+  font-size: var(--body-size, 9pt);
   color: #64748b;
   margin: 0;
 }
@@ -108,7 +108,7 @@
 }
 
 .st-skill-cat {
-  font-size: 9pt;
+  font-size: var(--body-size, 9pt);
   font-weight: 700;
   color: #1e293b;
   margin: 0 0 6px;
@@ -123,7 +123,7 @@
 /* We style the InlineEdit container to look like a set of pills */
 .st-pills-edit {
   display: block;
-  font-size: 8pt;
+  font-size: var(--body-size, 9pt);
   font-weight: 500;
   color: var(--st-primary, #0f172a);
   background: #e2e8f0;
@@ -135,17 +135,17 @@
 /* MAIN */
 .st-main {
   flex: 1;
-  padding: 12mm 10mm;
+  padding: var(--doc-margin, 12mm) 10mm;
   min-width: 0;
   background: #ffffff;
 }
 
 .st-section {
-  margin-bottom: 18px;
+  margin-bottom: var(--section-spacing, 18px);
 }
 
 .st-section-title {
-  font-size: 14pt;
+  font-size: var(--heading-size, 14pt);
   font-weight: 800;
   color: var(--st-primary, #0f172a);
   margin-bottom: 10px;
@@ -163,8 +163,7 @@
 }
 
 .st-body {
-  font-size: 9pt;
-  line-height: 1.6;
+  font-size: var(--body-size, 9pt);
   color: #475569;
   margin: 0;
 }
@@ -181,20 +180,20 @@
 }
 
 .st-company {
-  font-size: 11pt;
+  font-size: var(--body-size, 9pt);
   font-weight: 700;
   color: #0f172a;
   margin: 0 0 2px;
 }
 
 .st-job-title {
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9pt);
   font-weight: 600;
   color: var(--st-accent, #3b82f6);
 }
 
 .st-exp-meta {
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9pt);
   color: #64748b;
   font-weight: 500;
   text-align: right;
@@ -202,8 +201,7 @@
 }
 
 .st-bullets {
-  font-size: 9pt;
-  line-height: 1.55;
+  font-size: var(--body-size, 9pt);
   color: #475569;
 }
 

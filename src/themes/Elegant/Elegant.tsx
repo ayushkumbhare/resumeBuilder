@@ -17,6 +17,12 @@ export function Elegant({ data, styles, setData }: ElegantProps) {
     '--el-primary': styles.primaryColor,
     '--el-accent': styles.accentColor,
     '--el-font': styles.fontFamily,
+    '--body-size': `${(styles.bodyFontSize || 9.5) + (styles.globalFontScale || 0)}pt`,
+    '--heading-size': `${(styles.headingSize || 12) + (styles.globalFontScale || 0)}pt`,
+    '--name-size': `${(styles.nameSize || 26) + (styles.globalFontScale || 0)}pt`,
+    lineHeight: styles.lineHeight || 1.5,
+    '--section-spacing': `${styles.sectionSpacing ?? 10}px`,
+    padding: `${styles.documentMargin || 14}mm 18mm`,
   } as React.CSSProperties;
 
   return (

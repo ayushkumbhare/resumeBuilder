@@ -11,6 +11,12 @@ export function Minimal({ data, styles, setData }: ThemeProps) {
     '--mn-primary': styles.primaryColor,
     '--mn-accent': styles.accentColor,
     '--mn-font': styles.fontFamily,
+    '--body-size': `${(styles.bodyFontSize || 9.5) + (styles.globalFontScale || 0)}pt`,
+    '--heading-size': `${(styles.headingSize || 12) + (styles.globalFontScale || 0)}pt`,
+    '--name-size': `${(styles.nameSize || 22) + (styles.globalFontScale || 0)}pt`,
+    lineHeight: styles.lineHeight || 1.4,
+    '--section-spacing': `${styles.sectionSpacing ?? 12}px`,
+    padding: `${styles.documentMargin || 14}mm 20mm`,
   } as React.CSSProperties;
 
   return (
@@ -87,12 +93,12 @@ export function Minimal({ data, styles, setData }: ThemeProps) {
         <section className="mn-section edit-section">
           <h2 className="mn-section-title">Skills</h2>
           {data.skills.filter(s => s.visible).map(s => (
-            <p key={s.id} className="mn-skill-line edit-block" style={{ position: 'relative' }}>
+            <div key={s.id} className="mn-skill-line edit-block" style={{ position: 'relative' }}>
               <InlineEdit tag="span" className="mn-skill-cat" value={s.category} onChange={v => ed.updateSkill(s.id, 'category', v)} />
-              <span>: </span>
+              <span className="mn-skill-colon">: </span>
               <InlineEdit tag="span" className="mn-skill-items" value={s.items} onChange={v => ed.updateSkill(s.id, 'items', v)} />
               <button className="del-entry-btn" onClick={() => ed.removeSkill(s.id)} title="Remove">×</button>
-            </p>
+            </div>
           ))}
           <button className="section-add-entry" onClick={ed.addSkill}>+ Add Skill</button>
         </section>

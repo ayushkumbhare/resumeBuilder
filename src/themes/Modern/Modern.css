@@ -3,9 +3,11 @@
   min-height: 297mm;
   background: #fff;
   font-family: var(--mo-font, 'Inter', sans-serif);
-  font-size: 9pt;
+  font-size: var(--body-size, 9.5pt);
   box-sizing: border-box;
   color: #1a1a2e;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER */
@@ -21,7 +23,7 @@
 .mo-header-left {}
 
 .mo-name {
-  font-size: 20pt;
+  font-size: var(--name-size, 20pt);
   font-weight: 800;
   color: #fff;
   margin: 0 0 2px;
@@ -30,7 +32,7 @@
 }
 
 .mo-headline {
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: rgba(255,255,255,0.7);
   margin: 0;
   font-weight: 400;
@@ -42,21 +44,23 @@
 }
 
 .mo-contact {
-  font-size: 7.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: rgba(255,255,255,0.7);
   margin: 0 0 2px;
   line-height: 1.3;
 }
 
-/* BODY - 2 column grid */
+/* BODY - 2 column layout */
 .mo-body {
-  display: grid;
-  grid-template-columns: 72mm 1fr;
+  display: flex;
   min-height: calc(297mm - 40mm);
+  flex: 1;
 }
 
 /* LEFT COLUMN */
 .mo-left {
+  width: 72mm;
+  flex-shrink: 0;
   background: #f8fafc;
   padding: 7mm 6mm 7mm 8mm;
   border-right: 1px solid #e2e8f0;
@@ -64,16 +68,17 @@
 
 /* RIGHT COLUMN */
 .mo-right {
+  flex: 1;
   padding: 7mm 8mm 7mm 7mm;
 }
 
 /* SECTIONS */
 .mo-section {
-  margin-bottom: 9px;
+  margin-bottom: var(--section-spacing, 9px);
 }
 
 .mo-section-title {
-  font-size: 7.5pt;
+  font-size: var(--heading-size, 7.5pt);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -84,8 +89,7 @@
 }
 
 .mo-body-text {
-  font-size: 8.5pt;
-  line-height: 1.55;
+  font-size: var(--body-size, 9.5pt);
   color: #374151;
   margin: 0;
 }
@@ -96,17 +100,16 @@
 }
 
 .mo-skill-cat {
-  font-size: 8pt;
+  font-size: var(--body-size, 9.5pt);
   font-weight: 700;
   color: var(--mo-primary, #0F2A4A);
   margin: 0 0 1px;
 }
 
 .mo-skill-items {
-  font-size: 7.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #6b7280;
   margin: 0;
-  line-height: 1.45;
 }
 
 .mo-edu {
@@ -114,28 +117,27 @@
 }
 
 .mo-edu-inst {
-  font-size: 8pt;
+  font-size: var(--body-size, 9.5pt);
   font-weight: 700;
   color: #111827;
   margin: 0;
 }
 
 .mo-edu-deg {
-  font-size: 8pt;
+  font-size: var(--body-size, 9.5pt);
   color: #374151;
   margin: 1px 0 0;
 }
 
 .mo-edu-period {
-  font-size: 7.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #9ca3af;
   margin: 1px 0 0;
 }
 
 .mo-resp {
-  font-size: 8pt;
+  font-size: var(--body-size, 9.5pt);
   color: #374151;
-  line-height: 1.45;
   margin: 0 0 4px;
 }
 
@@ -154,20 +156,20 @@
 }
 
 .mo-company {
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9.5pt);
   font-weight: 700;
   color: #111827;
 }
 
 .mo-period {
-  font-size: 7.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #9ca3af;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .mo-job-title {
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: var(--mo-accent, #1A6FC4);
   font-weight: 600;
   margin: 1px 0 3px;
@@ -176,8 +178,7 @@
 .mo-bullets {
   margin: 2px 0 0;
   padding-left: 13px;
-  font-size: 8.5pt;
-  line-height: 1.45;
+  font-size: var(--body-size, 9.5pt);
   color: #374151;
 }
 

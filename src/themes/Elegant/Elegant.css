@@ -3,11 +3,9 @@
   min-height: 297mm;
   background: #fff;
   font-family: var(--el-font, 'Playfair Display', 'Merriweather', 'Lora', 'Georgia', serif);
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #1c1c1c;
-  padding: 18mm 22mm;
   box-sizing: border-box;
-  line-height: 1.5;
 }
 
 /* HEADER */
@@ -18,7 +16,7 @@
 
 .el-name {
   display: block;
-  font-size: 26pt;
+  font-size: var(--name-size, 26pt);
   font-weight: 400;
   color: var(--el-primary, #111);
   letter-spacing: 2px;
@@ -29,7 +27,7 @@
 
 .el-headline {
   display: block;
-  font-size: 11pt;
+  font-size: var(--body-size, 9.5pt);
   color: var(--el-accent, #555);
   font-style: italic;
   margin: 0 0 12px;
@@ -37,7 +35,7 @@
 }
 
 .el-contacts {
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #666;
   font-family: 'Inter', 'Helvetica Neue', sans-serif;
   letter-spacing: 0.5px;
@@ -50,11 +48,11 @@
 
 /* SECTIONS */
 .el-section {
-  margin-bottom: 20px;
+  margin-bottom: var(--section-spacing, 20px);
 }
 
 .el-section-title {
-  font-size: 11pt;
+  font-size: var(--heading-size, 11pt);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -80,8 +78,7 @@
 
 .el-summary {
   display: block;
-  font-size: 9.5pt;
-  line-height: 1.65;
+  font-size: var(--body-size, 9.5pt);
   color: #333;
   text-align: justify;
 }
@@ -99,13 +96,13 @@
 }
 
 .el-company {
-  font-size: 10.5pt;
+  font-size: var(--body-size, 9.5pt);
   font-weight: 700;
   color: var(--el-primary, #111);
 }
 
 .el-period {
-  font-size: 8.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: #666;
   font-family: 'Inter', 'Helvetica Neue', sans-serif;
   text-transform: uppercase;
@@ -114,7 +111,7 @@
 
 .el-exp-sub {
   margin-bottom: 6px;
-  font-size: 9.5pt;
+  font-size: var(--body-size, 9.5pt);
   color: var(--el-accent, #444);
 }
 
@@ -129,8 +126,7 @@
 .el-bullets {
   margin: 0;
   padding-left: 16px;
-  font-size: 9.5pt;
-  line-height: 1.6;
+  font-size: var(--body-size, 9.5pt);
   color: #333;
 }
 
@@ -147,8 +143,7 @@
 
 .el-skill-row {
   display: flex;
-  font-size: 9.5pt;
-  line-height: 1.5;
+  font-size: var(--body-size, 9.5pt);
 }
 
 .el-skill-cat {

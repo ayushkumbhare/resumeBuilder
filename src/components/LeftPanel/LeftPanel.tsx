@@ -164,6 +164,66 @@ export function LeftPanel({ data, setData, styles, setStyles }: LeftPanelProps) 
             </div>
 
             <div className="lp-divider" />
+            <p className="lp-label">Spacing & Layout</p>
+            <div className="lp-layout-controls" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <label className="lp-slider-item">
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#64748b', marginBottom: '4px', fontWeight: 600 }}>
+                  <span>Global Font Scale</span>
+                  <span>{styles.globalFontScale > 0 ? `+${styles.globalFontScale}` : styles.globalFontScale}pt</span>
+                </div>
+                <input type="range" min="-4" max="4" step="0.5" value={styles.globalFontScale} onChange={e => setStyles(s => ({ ...s, globalFontScale: parseFloat(e.target.value) }))} style={{ width: '100%' }} />
+              </label>
+
+              <label className="lp-slider-item">
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#64748b', marginBottom: '4px', fontWeight: 600 }}>
+                  <span>Name Size</span>
+                  <span>{styles.nameSize}pt</span>
+                </div>
+                <input type="range" min="16" max="36" step="1" value={styles.nameSize} onChange={e => setStyles(s => ({ ...s, nameSize: parseFloat(e.target.value) }))} style={{ width: '100%' }} />
+              </label>
+
+              <label className="lp-slider-item">
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#64748b', marginBottom: '4px', fontWeight: 600 }}>
+                  <span>Heading Size</span>
+                  <span>{styles.headingSize}pt</span>
+                </div>
+                <input type="range" min="10" max="18" step="0.5" value={styles.headingSize} onChange={e => setStyles(s => ({ ...s, headingSize: parseFloat(e.target.value) }))} style={{ width: '100%' }} />
+              </label>
+
+              <label className="lp-slider-item">
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#64748b', marginBottom: '4px', fontWeight: 600 }}>
+                  <span>Body Size</span>
+                  <span>{styles.bodyFontSize}pt</span>
+                </div>
+                <input type="range" min="8" max="14" step="0.5" value={styles.bodyFontSize} onChange={e => setStyles(s => ({ ...s, bodyFontSize: parseFloat(e.target.value) }))} style={{ width: '100%' }} />
+              </label>
+              
+              <label className="lp-slider-item">
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#64748b', marginBottom: '4px', fontWeight: 600 }}>
+                  <span>Line Height</span>
+                  <span>{styles.lineHeight}</span>
+                </div>
+                <input type="range" min="1.1" max="2.0" step="0.05" value={styles.lineHeight} onChange={e => setStyles(s => ({ ...s, lineHeight: parseFloat(e.target.value) }))} style={{ width: '100%' }} />
+              </label>
+
+              <label className="lp-slider-item">
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#64748b', marginBottom: '4px', fontWeight: 600 }}>
+                  <span>Section Spacing</span>
+                  <span>{styles.sectionSpacing}px</span>
+                </div>
+                <input type="range" min="0" max="30" step="1" value={styles.sectionSpacing} onChange={e => setStyles(s => ({ ...s, sectionSpacing: parseInt(e.target.value) }))} style={{ width: '100%' }} />
+              </label>
+
+              <label className="lp-slider-item">
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#64748b', marginBottom: '4px', fontWeight: 600 }}>
+                  <span>Document Margin</span>
+                  <span>{styles.documentMargin}mm</span>
+                </div>
+                <input type="range" min="5" max="30" step="1" value={styles.documentMargin} onChange={e => setStyles(s => ({ ...s, documentMargin: parseInt(e.target.value) }))} style={{ width: '100%' }} />
+              </label>
+            </div>
+
+            <div className="lp-divider" />
             <p className="lp-label">Resume Name</p>
             <input
               type="text"
