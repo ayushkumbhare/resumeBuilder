@@ -5,7 +5,7 @@ import type { ResumeData, StyleOptions } from '../types';
 export async function exportToPdf(data: ResumeData, styles: StyleOptions, filename: string = 'resume') {
   try {
     const doc = <PdfThemeRenderer data={data} styles={styles} />;
-    const asPdf = pdf([]); // Create pdf instance
+    const asPdf = pdf(); // Create pdf instance
     asPdf.updateContainer(doc);
     
     const blob = await asPdf.toBlob();

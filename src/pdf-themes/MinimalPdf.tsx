@@ -2,7 +2,6 @@ import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 import type { ResumeData, StyleOptions } from '../types';
 
 const createStyles = (styles: StyleOptions) => {
-  const primaryColor = styles.primaryColor || '#0F2A4A';
   const accentColor = styles.accentColor || '#1A6FC4';
   const bodySize = (styles.bodyFontSize || 9.5) + (styles.globalFontScale || 0);
   const headingSize = (styles.headingSize || 12) + (styles.globalFontScale || 0);

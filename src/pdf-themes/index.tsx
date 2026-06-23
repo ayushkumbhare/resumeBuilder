@@ -1,4 +1,4 @@
-import type { ThemeId, ResumeData, StyleOptions } from '../types';
+import type { ResumeData, StyleOptions } from '../types';
 import { ClassicPdf } from './ClassicPdf';
 import { SlatePdf } from './SlatePdf';
 import { ModernPdf } from './ModernPdf';
@@ -6,7 +6,6 @@ import { ExecutivePdf } from './ExecutivePdf';
 import { MinimalPdf } from './MinimalPdf';
 import { StartupPdf } from './StartupPdf';
 import { ElegantPdf } from './ElegantPdf';
-import type React from 'react';
 
 interface PdfThemeProps {
   data: ResumeData;
